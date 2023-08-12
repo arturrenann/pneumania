@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MapsComponent } from './maps/maps.component';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MapsComponent } from './maps/maps.component';
     HttpClientModule,
     HttpClientJsonpModule,
     GoogleMapsModule,
+    NgxPageScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,15 +5,15 @@
             <nav>
                 <ul>
                     <li><a href="#">HOME</a></li>
-                    <li><a href="#servicos">SERVICOS</a></li>
-                    <li><a href="#localizacao">LOCALIZAÇÃO</a></li>
-                    <li><a>CONTATO</a></li>
+                    <li><a pageScroll href="#servicos">SERVIÇOS</a></li>
+                    <li><a pageScroll href="#localizacao">LOCALIZAÇÃO</a></li>
                 </ul>
             </nav>
             <div class="btn-zap">
-                <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_TELEFONE" target="_blank" class="btn btn-success btn-lg">
+                <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_TELEFONE" target="_blank"
+                    class="btn btn-success btn-lg">
                     <i class="bi bi-whatsapp"></i>
-                    <span style="color: white;">  WHATSAPP</span>
+                    <span style="color: white;"> WHATSAPP</span>
                 </a>
             </div>
         </div>
@@ -25,65 +25,83 @@
         <img src="../assets/pneumania-logocomnumero.png">
     </div>
 </section>
-<section class="servicos"  id="servicos">
-    <h2>SERVIÇOS</h2>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+<section class="servicos" id="servicos">
+    <div class="container text-center">
+        <h2>SERVIÇOS</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card custom-card">
+                    <img src="../assets/pneu-venda.png" class="card-img-top img-fluid" alt="Serviço 1">
+                    <div class="card-body">
+                        <h5 class="card-title">VENDAS</h5>
+                        <p class="card-text">Amplie suas opções com nossa seleção de Pneus Multimarcas. Encontre a
+                            melhor combinação de desempenho e durabilidade para o seu veículo, garantindo segurança e
+                            conforto em cada viagem.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card custom-card">
+                    <img src="../assets/alinhamento.png" class="card-img-top img-fluid" alt="Serviço 2">
+                    <div class="card-body">
+                        <h5 class="card-title">ALINHAMENTO</h5>
+                        <p class="card-text">
+                            Oferecemos o <b>Alinhamento 3D.</b> Direção suave, pneus duráveis e manuseio preciso, tudo
+                            em um serviço avançado para sua tranquilidade na estrada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card custom-card">
+                    <img src="../assets/balanceamento.png" class="card-img-top img-fluid" alt="Serviço 3">
+                    <div class="card-body">
+                        <h5 class="card-title">BALANCEAMENTO</h5>
+                        <p class="card-text">Equilíbrio perfeito é a chave para uma direção suave. Com nosso
+                            Balanceamento Computadorizado, seus pneus terão um desempenho impecável, reduzindo vibrações
+                            e garantindo uma experiência de condução excepcional.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card custom-card">
+                    <img src="../assets/suspensao.png" class="card-img-top img-fluid" alt="Serviço 4">
+                    <div class="card-body">
+                        <h5 class="card-title">SUSPENSÃO</h5>
+                        <p class="card-text">Garanta uma condução suave e segura. Nossos especialistas cuidam da sua suspensão para máximo conforto na estrada.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    <div class="card-group">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Last updated 3 mins ago</small>
-          </div>
-        </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Last updated 3 mins ago</small>
-          </div>
-        </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
+    </div>
 </section>
-<section class="localizacao"  id="localizacao">
+
+
+<section class="localizacao" id="localizacao">
     <h2>NOSSA LOCALIZAÇÃO</h2>
     <div class="map-container">
-      <app-maps></app-maps>
+        <app-maps></app-maps>
     </div>
 </section>
-<footer>
-    <div class="footer-container">
-      <div class="contact-info">
-        <h3>Informações de Contato</h3>
-        <p><i class="bi bi-geo-alt-fill"></i> Endereço: SIA Q 5 C Lote Loja 32 - Brasília, DF, 71200-035</p>
-        <p><i class="bi bi-telephone-fill"></i> Telefone: (61) 3233-9704</p>
-      </div>
+<footer class="text-white">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Informações de Contato</h3>
+                <p><i class="bi bi-geo-alt-fill"></i> Endereço: SIA Q 5 C Lote Loja 32 - Brasília, DF, 71200-035</p>
+                <p><i class="bi bi-telephone-fill"></i> Telefone: (61) 3233-9704</p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-md-end align-items-center">
+                <div class="text-md-right">
+                    <h6>Pneu Mania</h6>
+                    <p>Todos os direitos reservados &copy; 2023</p>
+                    <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_TELEFONE" target="_blank" class="btn btn-success">
+                        <i class="bi bi-whatsapp"></i> Contato via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="footer-bottom">
-      <h1>Pneu Mania</h1>
-      <p>Todos os direitos reservados &copy; 2023</p>
-    </div>
-  </footer>
+</footer>

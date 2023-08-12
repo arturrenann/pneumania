@@ -1,105 +1,131 @@
 .container {
-    max-width: 1280px;
-    margin: auto;
+  max-width: 1280px;
+  margin: auto;
 }
 
 .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header {
-    width: 100%;
-    padding: 30px 0;
-    height: 200px;
-    /* Defina a altura desejada para o cabeçalho */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    /* Certifique-se de que o cabeçalho apareça acima do conteúdo */
-    display: flex;
-    justify-content: center;
-    /* Centraliza horizontalmente */
-    align-items: center;
-    /* Centraliza verticalmente */
-    transition: .5s;
+  width: 100%;
+  padding: 30px 0;
+  height: 200px;
+  /* Defina a altura desejada para o cabeçalho */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  /* Certifique-se de que o cabeçalho apareça acima do conteúdo */
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  transition: .5s;
 }
 
 header i {
-    font-size: 30px;
-    color: white;
+  font-size: 30px;
+  color: white;
 }
 
 header ul {
-    list-style-type: none;
-    margin: 0;
+  list-style-type: none;
+  margin: 0;
 }
 
 header ul li {
-    display: inline-block;
-    margin: 0 40px;
+  display: inline-block;
+  margin: 0 40px;
 }
 
 header ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  position: relative;
+
+  text-decoration: none;
+
+}
+
+header ul li a::before {
+  background: hsl(0, 0%, 77%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+
+header ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 header.rolagem {
-    background-color: white;
-    height: 120px;
-    padding: 0 0;
+  background-color: white;
+  height: 120px;
+  padding: 0 0;
 }
 
 header.rolagem a {
-    color: rgb(0, 0, 110) !important;
+  color: rgb(0, 0, 110) !important;
 }
 
 .background-with-filter {
-    position: relative;
-    /* Necessário para posicionar o elemento filho */
-    height: 100vh;
+  position: relative;
+  /* Necessário para posicionar o elemento filho */
+  height: 100vh;
 }
 
 /* Estilize o elemento que será usado como imagem de fundo */
 .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../assets/imagem-fundo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 90%;
-    filter: grayscale(100%);
-    /* Aplica o filtro na imagem de fundo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/imagem-fundo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 90%;
+  filter: grayscale(100%);
+  /* Aplica o filtro na imagem de fundo */
 }
 
 /* Estilize o elemento que conterá a imagem */
 /* Estilize o elemento que conterá a imagem */
 .background-image-filtered {
-    position: relative;
-    width: 100%; /* Garante que a imagem ocupe todo o espaço disponível no contêiner pai */
-    height: 100vh; /* Defina a altura do elemento para ocupar toda a altura da viewport */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    filter: grayscale(20%);
+  position: relative;
+  width: 100%;
+  /* Garante que a imagem ocupe todo o espaço disponível no contêiner pai */
+  height: 100vh;
+  /* Defina a altura do elemento para ocupar toda a altura da viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(20%);
 }
 
 /* Estilize a imagem dentro do contêiner */
 .background-image-filtered img {
-    width: 100%; /* A imagem ocupará todo o espaço disponível no contêiner */
-    max-width: 900px; /* A imagem não excederá a largura de 700px */
-    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  width: 100%;
+  /* A imagem ocupará todo o espaço disponível no contêiner */
+  max-width: 900px;
+  /* A imagem não excederá a largura de 700px */
+  height: auto;
+  /* A altura será ajustada automaticamente para manter a proporção */
 }
 
 .bi-whatsapp {
-    font-size: 20px !important; /* Defina o tamanho desejado para o ícone */
+  font-size: 20px !important;
+  /* Defina o tamanho desejado para o ícone */
 }
 
 .servicos {
@@ -114,66 +140,112 @@ header.rolagem a {
 }
 
 .localizacao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(39, 39, 39);
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(39, 39, 39);
+  width: 100%;
+  height: 100vh;
 }
 
 .localizacao h2 {
-    color: white;
+  color: white;
 }
 
 /* Definição das cores do footer */
 footer {
-    background-color: #111;
-    color: #fff;
-    padding: 30px 0;
-  }
-  
-  .footer-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-wrap: wrap;
-  }
-  
-  .contact-info {
-    flex-basis: 100%;
-    margin-bottom: 30px;
-  }
-  
-  .contact-info h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .contact-info p {
-    margin-bottom: 10px;
-  }
-  
-  .bi {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .footer-bottom h1 {
-    font-size: 36px;
-    margin-bottom: 5px;
-  }
-  
-  .footer-bottom p {
-    font-size: 14px;
-  }
+  background-color: #111;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex-basis: 100%;
+  margin-bottom: 30px;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.bi {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+.card {
+  border: none;
+  transition: transform 0.2s;
+  max-width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.col-md-3 {
+  flex: 0 0 calc(25% - 20px);
+  /* Adjust the margin between cards */
+  margin: 10px;
+}
+
+/* Update the card image to make it fit within the card */
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Update the card body to adjust the text alignment */
+.card-body {
+  text-align: center;
+  background-color:rgb(194, 194, 194);;
+}
+
+/* Adjust the card title and text styles */
+.card-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.custom-card {
+  height: 100%;
+}
+

@@ -12,7 +12,6 @@ import { Observable, catchError, map, of } from 'rxjs';
 export class AppComponent {
     title = 'pneu-mania';
 
-
     @HostListener('window:scroll', ['$event'])
     onScroll(event: Event) {
         let header = document.querySelector('#header')
